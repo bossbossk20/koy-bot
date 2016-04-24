@@ -1,0 +1,22 @@
+{
+  "name": "koy-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bossbossk20/koy-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bossbossk20/koy-bot/issues"
+  },
+  "homepage": "https://github.com/bossbossk20/koy-bot#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
