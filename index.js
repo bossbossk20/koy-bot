@@ -1,6 +1,7 @@
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
+var request = require('request')
 
 app.use(bodyParser.json())
 
@@ -28,6 +29,28 @@ app.post('/webhook/', function (req, res) {
   }
   res.sendStatus(200)
 })
+var token = 'EAAWk6sNrfjcBALNrPM8ZBZAadvzid2v0Kv7mZCRvMOsPdKJUcTerfpafbk6ATYazkOJ3Q8WZCbjDyw3b7KlPGrgpjj1clGNNu3QjhIlNhYXLWiZB1gFXbzwOJtpBB5N3xZAmZBJisZBhrPr5lXRaIwrPByBpeLPGR9klzrQJHXJlCAZDZD'
+
+function sendTextMessage (sender, text) {
+  var messageData = {
+    text: text
+  }
+  request({
+    url: 'https://graph.facebook.com/v2.6/me/messages',
+    qs: {access_token: token},
+    method: 'POST',
+    json: {
+      recipient: {id: sender},
+      message: messageData,
+    }
+  }, function (error, response, body) {
+    if (error) {
+      console.log('Error sending message: ', error)
+    } else if (response.body.error) {
+      console.log('Error: ', response.body.error)
+    }
+  })
+}
 
 app.set('port', (process.env.PORT || 5000))
 
