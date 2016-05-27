@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/webhook/', function (req, res) {
-  if (req.query['hub.verify_token'] === '') {
+  if (req.query['hub.verify_token'] === '1234') {
     res.send(req.query['hub.challenge'])
   }
   res.send('Error, wrong validation token')
@@ -29,7 +29,9 @@ app.post('/webhook/', function (req, res) {
   }
   res.sendStatus(200)
 })
-var tokenn = 'EAAWk6sNrfjcBALNrPM8ZBZAadvzid2v0Kv7mZCRvMOsPdKJUcTerfpafbk6ATYazkOJ3Q8WZCbjDyw3b7KlPGrgpjj1clGNNu3QjhIlNhYXLWiZB1gFXbzwOJtpBB5N3xZAmZBJisZBhrPr5lXRaIwrPByBpeLPGR9klzrQJHXJlCAZDZD'
+
+var token = 'EAAWk6sNrfjcBALNrPM8ZBZAadvzid2v0Kv7mZCRvMOsPdKJUcTerfpafbk6ATYazkOJ3Q8WZCbjDyw3b7KlPGrgpjj1clGNNu3QjhIlNhYXLWiZB1gFXbzwOJtpBB5N3xZAmZBJisZBhrPr5lXRaIwrPByBpeLPGR9klzrQJHXJlCAZDZD'
+
 function sendTextMessage (sender, text) {
   var messageData = {
     text: text
