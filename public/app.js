@@ -7,8 +7,11 @@ angular.module('app', [])
       answer : app.anwser
 
     }
-    console.log(data)
     app.add = function () {
+      var data = {
+        key : app.key,
+        answer : app.anwser
+      }
       console.log(data)
     }
     app.re = function (data){
