@@ -7,7 +7,7 @@ angular.module('app', [])
       answer : app.answer
 
     }
-    sen()
+
     app.add = function (f) {
 
       console.log(f)
@@ -18,7 +18,7 @@ angular.module('app', [])
        })
     }
 
-    function sed(){
+    fapp.sed = function (){
       $http.get('https://sheetsu.com/apis/v1.0/43c348a7757a'). success(function(response) {
          console.log(response)
          keep.push(response)
