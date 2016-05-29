@@ -32,7 +32,7 @@ angular.module('app', [])
          console.log(keep)
          app.se();
 
-          app.se = function () {
+          function se() {
             $http.post('https://sheetsu.com/apis/v1.0/43c348a7757a', keep)
                .then(function success (response) {
                  console.log(response)
