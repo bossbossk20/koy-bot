@@ -7,12 +7,9 @@ angular.module('app', [])
       answer : app.answer
 
     }
-    app.add = function () {
-      var data = {
-        key : app.key,
-        answer : app.answser
-      }
-      console.log(data)
+    app.add = function (f) {
+
+      console.log(f)
       $http.post('https://sheetsu.com/apis/v1.0/43c348a7757a', data)
          .then(function success (response) {
            console.log(response)
