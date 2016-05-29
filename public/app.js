@@ -30,14 +30,17 @@ angular.module('app', [])
          });
 
          console.log(keep)
+         app.se();
 
-        //  $http.post('https://sheetsu.com/apis/v1.0/43c348a7757a', keep)
-        //     .then(function success (response) {
-        //       console.log(response)
-        //     }, function error (response) {
-        //   })
+          app.se = function () {
+            $http.post('https://sheetsu.com/apis/v1.0/43c348a7757a', keep)
+               .then(function success (response) {
+                 console.log(response)
+               }, function error (response) {
+             })
+          }
 
-    
+
 
 
 
