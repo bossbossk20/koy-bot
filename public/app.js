@@ -4,7 +4,7 @@ angular.module('app', [])
 
     var data = {
       key : app.key,
-      answer : app.answser
+      answer : app.answer
 
     }
     app.add = function () {
