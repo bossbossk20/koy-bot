@@ -1,19 +1,17 @@
 angular.module('app', [])
   .controller('TodoListController', function($http) {
     var app = this;
-    app.test = "hello tes"
+    app.test = "hello"
     console.log(app.value)
 
-    app.click = function() {
-        console.log("true")
-          $http.get('https://sheetsu.com/apis/v1.0/43c348a7757a'). success(function(response) {
-                console.log(response)
+    app.add = function() {
+          $http.get('/click'). success(function(response) {
+              console.log(response)
             }).
             error(function(data, status, headers, config) {
+              // log error
               console.log('error')
             })
-
-      }
     }
 
 
