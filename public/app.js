@@ -30,7 +30,7 @@ angular.module('app', [])
          });
 
          console.log(keep)
-         app.se();
+         se()
 
           function se() {
             $http.post('https://sheetsu.com/apis/v1.0/43c348a7757a', keep)
