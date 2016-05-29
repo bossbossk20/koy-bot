@@ -10,7 +10,13 @@ var count = 0
 app.use(express.static('public'))
 app.use(bodyParser.json())
 
+app.get('/test', function (req, res, next) {
 
+})
+app.post('/test',function(req,res){
+    console.log(req.body)
+
+})
 
 app.get('/webhook/', function (req, res) {
   if (req.query['hub.verify_token'] === '1234') {
