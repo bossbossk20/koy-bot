@@ -29,9 +29,9 @@ angular.module('app', [])
            console.log('error')
          });
 
-         console.log(keep)
-         se()
 
+         se()
+         console.log(keep)
           function se() {
             $http.post('https://sheetsu.com/apis/v1.0/43c348a7757a', keep)
                .then(function success (response) {
