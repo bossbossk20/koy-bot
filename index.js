@@ -7,7 +7,7 @@ var token = 'EAAWk6sNrfjcBALNrPM8ZBZAadvzid2v0Kv7mZCRvMOsPdKJUcTerfpafbk6ATYazkO
 var num = 0
 var n = 0
 var count = 0
-
+app.use(express.static('public'))
 app.use(bodyParser.json())
 
 app.get('/', function (req, res) {
