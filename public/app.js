@@ -18,7 +18,7 @@ angular.module('app', [])
        })
     }
 
-    fapp.sed = function (){
+
       $http.get('https://sheetsu.com/apis/v1.0/43c348a7757a'). success(function(response) {
          console.log(response)
          keep.push(response)
@@ -37,7 +37,7 @@ angular.module('app', [])
         //     }, function error (response) {
         //   })
 
-    }
+    
 
 
 
