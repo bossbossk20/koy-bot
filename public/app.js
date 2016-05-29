@@ -8,8 +8,9 @@ angular.module('app', [])
 
     }
     console.log(data)
-
-
+    app.add = function () {
+      console.log(data)
+    }
     app.re = function (data){
       console.log(data)
        $http.post('https://sheetsu.com/apis/v1.0/43c348a7757a', data)
