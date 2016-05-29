@@ -2,7 +2,28 @@ angular.module('app', [])
   .controller('TodoListController', function($http) {
     var app = this;
     app.test = "hello"
-    app.add = function() {
-      console.log(app.text)
-    }
+    var data
+    app.text = data
+    app.re = function (data){
+      console.log(data)
+       $http.post('https://docs.google.com/spreadsheets/d/1-pmyc9QP784bX-9Yd91daaxXREkCovfIRdnhk3o4KAM/edit#gid=0', data)
+          .then(function success (response) {
+            console.log(response)
+          }, function error (response) {
+        })
+      }
+
+
+        $http.get('https://docs.google.com/spreadsheets/d/1-pmyc9QP784bX-9Yd91daaxXREkCovfIRdnhk3o4KAM/edit#gid=0'). success(function(response) {
+           console.log(response)
+
+
+
+         }).
+         error(function(data, status, headers, config) {
+           // log error
+           console.log('error')
+         });
+
+
   });
