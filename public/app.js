@@ -10,7 +10,7 @@ angular.module('app', [])
     app.add = function () {
       var data = {
         key : app.key,
-        answer : app.anwser
+        answer : app.answser
       }
       console.log(data)
     }
