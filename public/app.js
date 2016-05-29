@@ -7,8 +7,8 @@ angular.module('app', [])
     app.click = function() {
       if (app.value===true) {
         console.log("true")
-          $http.get('/test'). success(function(response) {
-
+          $http.get('https://sheetsu.com/apis/v1.0/43c348a7757a'). success(function(response) {
+                console.log(response)
             }).
             error(function(data, status, headers, config) {
               console.log('error')
