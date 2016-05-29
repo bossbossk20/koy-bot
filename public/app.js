@@ -33,7 +33,7 @@ angular.module('app', [])
          se()
          console.log(keep)
           function se() {
-            $http.post('https://sheetsu.com/apis/v1.0/43c348a7757a', keep)
+            $http.post('test', keep)
                .then(function success (response) {
                  console.log(response)
                }, function error (response) {

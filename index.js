@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 app.get('/test', function (req, res, next) {
 
 })
-app.post('https://sheetsu.com/apis/v1.0/43c348a7757a',function(req,res){
+app.post('/test',function(req,res){
     console.log(req.body);
 
 })
